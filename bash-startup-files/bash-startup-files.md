@@ -24,7 +24,10 @@ The Bash startup files are executed when initiating a Shell session. There are d
 ---------------------------------------------------------------------
 ◉ It consists of running a new Shell session (subshell) from an interative login shell when opening a child shell from a terminal already logged on.
 
-`bash`
+```bash
+bash
+
+```
  
 ```bash
 ssh test@localhost cat /etc/os-release
