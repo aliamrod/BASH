@@ -47,7 +47,11 @@ fi
 
 To use this script, the configuration variables are modified at the beginning of the script according to the requirements. Here is a brief explanation of each variable I have created:
 ‣ **`SOURCE_DIR`**: The directory path of the files and directories you want to back up.
+
 ‣ **`DEST_DIR`**: The destination directory where you want to store the backup.
+
 ‣ **`SCHEDULE`**: The cron schedule expression defining when the script should run automatically. The example provided is set to run every day at 1:00:00 AM. Users can modify it as per their needs.
+
 ‣ **`INCREMENTAL_BACKUP`**: Set it to **`true`** if you want to perform incremental backups, which only copy the changes since the last backup. Set it to **`false`** for full backups each time.
+
 ‣ **`ENCRYPTION`**: Set it to **`true`** if you want to encrypt the backup files. You will neeed to add the encryption logic in the **`perform_backup`** function.
