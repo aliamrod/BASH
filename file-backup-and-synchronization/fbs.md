@@ -60,3 +60,13 @@ Users can save the script in a file, e.g. **`backup_script.sh`**, and make it ex
 ```bash
 chmod +x backup_script.sh
 ```
+
+To run the script manually, use:
+```bash
+./backup_script.sh
+```
+
+To schedule the script for automated backups, one could also implement an entry to the crontab using the **`crontab -e`** command and append the following line:
+```bash
+0 1 * * * /path/to/backup_script.sh scheduled
+```
