@@ -40,3 +40,34 @@ ssh test@localhost cat /etc/os-release
 |:--:|
 |![i])
 ```
+
+## Bash Startup Files Precedence
+---------------------------------------------------------------------
+The following diagram demonstrates the Bash startup precedence on Ubuntu 22.04 system.
+
+---
+title: Bash startup files order of precedence
+---
+flowchart LR
+  subgraph A["affect all users"]
+    direction LR
+    a(/etc/bash.bashrc) -->  b(/etc/profile) 
+  end 
+  subgraph B["interactive login shell (single user)"]
+    direction LR
+    subgraph when session starts
+      c("~/.bash_profile") --> 
+      d("~/.bash_login") --> 
+      e("~/.profile") 
+    end
+    subgraph C["at session ends"]
+      f("~/.bash_logout")
+    end
+  end
+  subgraph D["interactive non-login shell (single user subshell)"]
+    direction LR
+      g("~/.bash_rc")
+  end
+  A --> B
+  e --> f
+  a --> g
