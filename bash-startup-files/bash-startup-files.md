@@ -78,3 +78,14 @@ flowchart LR
 ## Miscellaneous
 ### Tilde Expansion
 If a word begins with an unquoted tilde character ('~'), all of the characters up to the first unquoted slack (or all characters, if there is no unquoted slash) are considered a _tilde-prefix_. If none of the characters in the tilde-prefix are quoted, the characters in the tilde-prefix following the tilde are treated as a possible _login name_. If this login name is the null string, the tilde is repaced with the value of the `HOME` shell variable. If `HOME` is unset, the home directory of the user executing the shell is substituted instead. Otherwise, the tilde-prefix is replaced with the home directory associated with the specific login name.
+
+If the tile-prefix is '~+', the value of the shell variable `PWD` replaces the tilde-prefix. 
+
+Each variable assignmment is checked for unquoted tilde-prefixes immediately following a ':' or the first '='. In these cases, tilde expansion is also performed. Consequently, one may use filenames with tildes in assignments to `PATH`, `MAILPATH`, and `CDPATH`, and the shell assigns the expanded value.
+
+The following table shows how Bash treats unquoted tilde-prefixes.
+
+| Command | Description |
+| --- | --- |
+| ~ | The value of $HOME|
+| ~/foo | $HOME/foo |
