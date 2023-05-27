@@ -89,3 +89,13 @@ The following table shows how Bash treats unquoted tilde-prefixes.
 | --- | --- |
 | ~ | The value of $HOME|
 | ~/foo | $HOME/foo |
+| ~N | The string that would be displayed by ‘dirs +N’ |
+| ~+N | The string that would be displayed by ‘dirs +N’ |
+| ~-N | The string that would be displayed by ‘dirs -N’ |
+
+
+
+
+
+
+
