@@ -15,4 +15,13 @@
 ### Password Manager
 ⊛ Password Manager: Secure script for managing passwords. It allows users to store, retrieve, and generate strong passwords, with options for encryption, master password, and easy integration with the command line.
 
+⊛ Password Generator
+
+⊛ Password Strength Checker
+
+⊛ Password Vault
+
+⊛ Password Expiry Reminder
+
+⊛ Two-Factor Authentication (2FA)
 
