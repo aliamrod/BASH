@@ -75,3 +75,4 @@ This will execute the script at 1:00:00 AM every day.
 
 * Note: Make sure you have the necessary permissions to read the source directory and write to the destination directory. Additionally, if you plan to use encryption, you will need to implement the encryption logic based on your preferred method (e.g., GPG, OpenSSL).
 
+
