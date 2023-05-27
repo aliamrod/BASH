@@ -1,6 +1,8 @@
 # Bash Startup Files
 The Bash startup files are executed when initiating a Shell session. There are different log-in modes.
 
+This section describes how Bash executes its startup files. If any of the fils exist but cannot be read, Bash reports an error. Tildes are expanded in filenames as described under Tilde Expansion in "Miscellaneous".
+
 ## Interactive Login Shell.
 ---------------------------------------------------------------------
 ◉ This mode refers to opening a local terminal in your machine or connecting to a remote one interactively. In other words, a session is initiated after a successful login. `ssh user@host`
@@ -71,3 +73,8 @@ flowchart LR
   A --> B
   e --> f
   a --> g
+
+
+## Miscellaneous
+### Tilde Expansion
+If a word begins with an unquoted tilde character ('~'), all of the characters up to the first unquoted slack (or all characters, if there is no unquoted slash) are considered a _tilde-prefix_. If none of the characters in the tilde-prefix are quoted, the characters in the tilde-prefix following the tilde are treated as a possible _login name_. If this login name is the null string, the tilde is repaced with the value of the `HOME` shell variable. If `HOME` is unset, the home directory of the user executing the shell is substituted instead. Otherwise, the tilde-prefix is replaced with the home directory associated with the specific login name.
