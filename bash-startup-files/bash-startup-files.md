@@ -26,3 +26,7 @@ The Bash startup files are executed when initiating a Shell session. There are d
 
 `bash`
  
+```bash
+ssh test@localhost cat /etc/os-release
+
+```
