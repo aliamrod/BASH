@@ -55,3 +55,8 @@ To use this script, the configuration variables are modified at the beginning of
 ‣ **`INCREMENTAL_BACKUP`**: Set it to **`true`** if you want to perform incremental backups, which only copy the changes since the last backup. Set it to **`false`** for full backups each time.
 
 ‣ **`ENCRYPTION`**: Set it to **`true`** if you want to encrypt the backup files. You will neeed to add the encryption logic in the **`perform_backup`** function.
+
+Users can save the script in a file, e.g. **`backup_script.sh`**, and make it executable using the following command:
+```bash
+chmod +x backup_script.sh
+```
