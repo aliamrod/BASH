@@ -46,6 +46,7 @@ fi
 ```
 
 To use this script, the configuration variables are modified at the beginning of the script according to the requirements. Here is a brief explanation of each variable I have created:
+
 ‣ **`SOURCE_DIR`**: The directory path of the files and directories you want to back up.
 
 ‣ **`DEST_DIR`**: The destination directory where you want to store the backup.
